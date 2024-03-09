@@ -1,0 +1,7 @@
+
+scikit_learn
+pandas
+matplotlib
+seaborn
+json
+Pillow
