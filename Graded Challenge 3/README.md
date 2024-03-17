@@ -1,3 +1,5 @@
+**Latar Belakang Masalah**
+
 Saya berencana untuk menjadi dropshiper, saya akan ambil produk Seblak yang sedang viral saat ini.
 
 Berdasarkan ilmu yang saya pelajari di Hacktiv8, saya akan memulai dengan melakukan Web Scraping di salah satu website e-commerce terbesar di Indonesia, yaitu Tokopedia.
