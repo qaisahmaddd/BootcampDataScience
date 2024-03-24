@@ -1,0 +1,35 @@
+url dataset: https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
+
+Syntax DDL
+-- Membuat username dengan previlige tertinggi
+CREATE ROLE qais_ahmad SUPERUSER LOGIN PASSWORD 'ftds_ht8';
+-- Membuat Database dengan nama qaism3_db
+CREATE DATABASE qaism3_db WITH OWNER qais_ahmad;
+-- Membuat tabel baru
+CREATE TABLE table_m3 (
+    "Row ID" INTEGER,
+    "Order ID" VARCHAR(255),
+    "Order Date" DATE,
+    "Ship Date" DATE,
+    "Ship Mode" VARCHAR(255),
+    "Customer ID" VARCHAR(255),
+    "Customer Name" VARCHAR(255),
+    "Segment" VARCHAR(255),
+    "Country" VARCHAR(255),
+    "City" VARCHAR(255),
+    "State" VARCHAR(255),
+    "Postal Code" VARCHAR(255),
+    "Region" VARCHAR(255),
+    "Product ID" VARCHAR(255),
+    "Category" VARCHAR(255),
+    "Sub Category" VARCHAR(255),
+    "Product Name" VARCHAR(255),
+    "Sales" DECIMAL(15, 2),
+    "Quantity" INTEGER,
+    "Discount" DECIMAL(5, 2),
+    "Profit" DECIMAL(15, 2)
+);
+Syntax DML
+-- Insert csv ke dalam tabel table_m3 di database qaism3_db yang sedang aktif
+\COPY table_m3 ("Row ID", "Order ID", "Order Date", "Ship Date", "Ship Mode", "Customer ID", "Customer Name", "Segment", "Country", "City", "State", "Postal Code", "Region", "Product ID", "Category", "Sub Category", "Product Name", "Sales", "Quantity", "Discount", "Profit") FROM '/Users/qaisahmad/Documents/GitHub/M3/P2M3_ahmad_qais_data_raw.csv' DELIMITER ',' CSV HEADER ENCODING 'latin1';
+Saya menggunakan psql karena sql standard error. Saya juga menggunakan atribut tambahan ENCODING 'latin1', karena terdapat text yang tidak support UTF.
